@@ -1,3 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+$fontMain: "Roboto", sans-serif;
+$textShadow: 0 50px 30px rgba(64, 72, 90, 0.3);
+$webColor: #4ba9ff;
+$titleColor: #40485a;
+$descriptionColor: #6a707d;
+$lineColor: #4a24a8;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 body {
-    
+  padding: 0;
+  margin: 0;
+  font-family: $fontMain;
+}
+// Grid
+.row {
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+.row::before,
+.row::after {
+  content: "";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+.col {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  float: left;
+}
+.col-25 {
+  width: 25%;
+}
+.col-40 {
+  width: 40%;
+}
+.col-60 {
+  width: 60%;
+}
+// Container
+.container {
+  width: 100%;
+  max-width: 1170px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+// Header
+.header {
+  position: absolute;
+  padding-top: 30px;
+  width: 100%;
+
+  z-index: 10;
+}
+// Navigation
+.nav {
+  float: right;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+// Presentation
+.presentation {
+  background-image: url(../image/bg_presentation.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.presentation-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  min-width: 815px;
+  margin: 0 auto;
+  text-align: center;
+  h1 {
+    text-shadow: $textShadow;
+    color: white;
+    font-size: 90px;
+    font-weight: 300;
+    span {
+      color: $webColor;
+    }
+  }
+}
+// About Us
+.about_us {
+  padding: 100px 0;
+}
+.about_us-title {
+  padding-top: 10px;
+  position: relative;
+  font-size: 48px;
+  font-weight: 300;
+  color: $titleColor;
+}
+.about_us-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 3px;
+  bottom: 0;
+  margin-bottom: -40px;
+  background-color: $lineColor;
+}
+
+.about_us-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $descriptionColor;
+  width: 100%;
+  max-width: 670px;
+}
+
+.photo {
+  img {
+    display: block;
+  }
 }
